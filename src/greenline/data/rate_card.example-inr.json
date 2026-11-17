@@ -1,0 +1,13 @@
+{
+  "note": "EXAMPLE ONLY. Indicative per-message prices for recipients in India, in paise. Meta changes its rates; verify current Meta pricing for your markets before using these numbers for billing.",
+  "currency": "INR",
+  "minor_units": 100,
+  "rates": {
+    "marketing": 86,
+    "utility": 12,
+    "authentication": 11,
+    "service": 12
+  },
+  "free_in_window": [],
+  "free_service_per_number_per_month": 1000
+}
