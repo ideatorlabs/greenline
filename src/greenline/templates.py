@@ -4,7 +4,7 @@ A template belongs to one WhatsApp Business Account (WABA), must be approved by 
 can be sent, has a category (which drives both the consent rules and the price) and declares a
 fixed number of body variables. The registry keeps a local copy of what each WABA holds so sends
 can check approval and variable count without a network call; it is refreshed by
-:meth:`TemplateRegistry.sync` and by ``message_template_status_update`` webhooks.
+``TemplateRegistry.sync`` and by ``message_template_status_update`` webhooks.
 """
 
 from __future__ import annotations
@@ -220,7 +220,7 @@ class TemplateRegistry:
     def sync(self, provider: Provider, waba_id: str, token: str) -> list[dict[str, str]]:
         """Pull every template's review state from the provider and store it.
 
-        Raises :class:`~greenline.errors.ProviderError` when the provider can't be read.
+        Raises ``ProviderError`` when the provider can't be read.
         """
         remote = provider.list_templates(waba_id, token)
         out = []

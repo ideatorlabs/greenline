@@ -3,7 +3,7 @@
 ``engine.webhook.verify(query_params)`` answers Meta's GET handshake and
 ``engine.webhook.receive(raw_body, signature_header)`` handles a POST. Both return
 ``(http_status, body)`` so any web framework can wrap them in a few lines; the FastAPI wrapper is
-in :mod:`greenline.ext.fastapi`.
+in ``greenline.ext.fastapi``.
 
 A POST with a missing or wrong ``X-Hub-Signature-256`` gets 403. Everything else gets 200, even a
 body that cannot be parsed or an event that fails: Meta retries (and eventually disables) webhooks

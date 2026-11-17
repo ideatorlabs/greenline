@@ -2,7 +2,7 @@
 
 It records what would have been sent, approves submitted templates immediately, and parses
 webhook bodies in Meta's format, so a local app can be driven end to end with realistic payloads
-(see :mod:`greenline.testing`).
+(see ``greenline.testing``).
 """
 
 from __future__ import annotations

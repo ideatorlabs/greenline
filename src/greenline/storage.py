@@ -1,4 +1,4 @@
-"""Database models and the :class:`Storage` handle.
+"""Database models and the ``Storage`` handle.
 
 Greenline keeps its own tables (``<prefix>numbers``, ``<prefix>contacts``, ``<prefix>messages``,
 ``<prefix>templates``, ``<prefix>webhook_events``). They reference your application's records only

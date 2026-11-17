@@ -11,8 +11,8 @@ from greenline.schemas import Outbound, ProviderResult, Sender, WebhookEvent
 class Provider(Protocol):
     """What the engine needs from a messaging backend.
 
-    ``send`` returns a :class:`ProviderResult` on success and raises
-    :class:`~greenline.errors.ProviderError` (or ``RateLimited``) on failure, with
+    ``send`` returns a ``ProviderResult`` on success and raises
+    ``ProviderError`` (or ``RateLimited``) on failure, with
     ``retryable`` set when trying again could help.
     """
 

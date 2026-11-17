@@ -1,7 +1,7 @@
 """Engine settings.
 
-Build :class:`Settings` directly, or read them from the environment with
-:meth:`Settings.from_env` (variables are ``GREENLINE_*`` by default).
+Build ``Settings`` directly, or read them from the environment with
+``Settings.from_env`` (variables are ``GREENLINE_*`` by default).
 """
 
 from __future__ import annotations

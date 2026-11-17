@@ -1,7 +1,7 @@
 """Per-message cost estimates.
 
 Meta bills per delivered message, at a rate that depends on the message category and the
-recipient's market. A :class:`RateCard` holds those rates in the currency's minor unit (cents,
+recipient's market. A ``RateCard`` holds those rates in the currency's minor unit (cents,
 paise...). The engine prices each outbound message when it is sent and stores the estimate on the
 message row, so you can meter usage per tenant and reconcile against Meta's invoice later.
 

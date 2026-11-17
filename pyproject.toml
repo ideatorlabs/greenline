@@ -42,7 +42,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/ideatorlabs/greenline"
+Homepage = "https://ideatorlabs.github.io/greenline/"
+Documentation = "https://ideatorlabs.github.io/greenline/"
 Repository = "https://github.com/ideatorlabs/greenline"
 Issues = "https://github.com/ideatorlabs/greenline/issues"
 

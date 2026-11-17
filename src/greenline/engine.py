@@ -2,7 +2,7 @@
 
 Outbound, in order:
 
-1. Master switch and test mode (:mod:`greenline.gate`).
+1. Master switch and test mode (``greenline.gate``).
 2. Idempotency: a repeated ``idempotency_key`` returns the first result without sending again.
 3. Consent and the customer-service window: opted-out contacts get nothing; free-form text only
    goes inside the window; marketing templates need an opt-in.
@@ -190,7 +190,7 @@ class Engine:
     def sender_for(self, tenant_id: str) -> Sender:
         """The tenant's own newest live number, else the oldest live shared number.
 
-        Raises :class:`NumberNotReady` when neither exists.
+        Raises ``NumberNotReady`` when neither exists.
         """
         N = self.m.Number
         with self.storage.session() as db:
@@ -275,12 +275,12 @@ class Engine:
 
         Inside the customer-service window, ``text`` goes out as a free-form message. Outside it
         (or without text), ``template`` is sent instead: either the name of a template approved
-        on the sending account, or a :class:`TemplateMessage` you built yourself. ``params`` fill
+        on the sending account, or a ``TemplateMessage`` you built yourself. ``params`` fill
         the template's variables (``[text]`` when omitted), sanitised for Meta and padded or
         truncated to the template's variable count.
 
         Never raises for policy reasons: a refused send has ``ok=False`` and ``skipped`` set.
-        Raises :class:`NumberNotReady` when the tenant has no number to send from.
+        Raises ``NumberNotReady`` when the tenant has no number to send from.
         """
         phone = digits(to)
         if not phone:
@@ -817,7 +817,7 @@ class Engine:
     def submit_templates(
         self, waba_id: str, definitions: Iterable[TemplateDefinition], *, token: str | None = None
     ) -> list[dict[str, Any]]:
-        """Submit template definitions to an account (idempotent). See :meth:`TemplateRegistry.submit`."""
+        """Submit template definitions to an account (idempotent). See ``TemplateRegistry.submit``."""
         return self.templates.submit(
             self.provider, waba_id, token or self._account_token(waba_id), definitions
         )
